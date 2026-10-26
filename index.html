@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101225">
+  <meta name="description" content="NameStyle Pro — Stylish names, fancy fonts, couple names and gaming names.">
+  <title>NameStyle Pro — Stylish Name Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="NameStyle Pro home"><span class="brand-icon">✦</span><span>NameStyle <b>Pro</b><small>YOUR NAME, YOUR STYLE</small></span></a>
+    <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">বাংলা / EN</button>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span><span data-bn="ফ্রি স্টাইলিশ নাম জেনারেটর" data-en="FREE STYLISH NAME GENERATOR">ফ্রি স্টাইলিশ নাম জেনারেটর</span></div>
+      <h1><span data-bn="তোমার নাম," data-en="Your Name,">তোমার নাম,</span><br><span class="gradient" data-bn="তোমার স্টাইল ✨" data-en="Your Style ✨">তোমার স্টাইল ✨</span></h1>
+      <p data-bn="TikTok, Facebook, Instagram ও গেমের জন্য ইউনিক নাম বানাও—এক ক্লিকেই কপি করো।" data-en="Create unique names for TikTok, Facebook, Instagram and games — copy in one tap.">TikTok, Facebook, Instagram ও গেমের জন্য ইউনিক নাম বানাও—এক ক্লিকেই কপি করো।</p>
+      <div class="hero-chips"><span>♡ Couple names</span><span>✧ Fancy fonts</span><span>♛ Gaming</span></div>
+    </section>
+
+    <section class="generator panel">
+      <div class="section-heading"><div><span class="step">01</span><h2 data-bn="তোমার নাম লিখো" data-en="Enter your name">তোমার নাম লিখো</h2></div><span class="tiny-note" data-bn="কোনো অ্যাকাউন্ট লাগবে না" data-en="No account needed">কোনো অ্যাকাউন্ট লাগবে না</span></div>
+      <label class="field-label" for="nameInput" data-bn="নাম / Name" data-en="Name / নাম">নাম / Name</label>
+      <input id="nameInput" type="text" maxlength="40" autocomplete="off" placeholder="যেমন: Wahidul" value="Wahidul">
+      <div class="couple-grid">
+        <div><label class="field-label" for="partnerInput" data-bn="দ্বিতীয় নাম (Couple-এর জন্য)" data-en="Second name (for couples)">দ্বিতীয় নাম (Couple-এর জন্য)</label><input id="partnerInput" type="text" maxlength="40" placeholder="যেমন: Wifey"></div>
+        <div><label class="field-label" for="separator" data-bn="নামের মাঝে" data-en="Separator">নামের মাঝে</label><select id="separator"><option value="_">_ underscore</option><option value=" ♡ ">♡ heart</option><option value=" × ">× cross</option><option value=" • ">• dot</option><option value=" + ">+ plus</option><option value=" ">Space</option></select></div>
+      </div>
+      <div class="section-heading compact"><div><span class="step">02</span><h2 data-bn="ক্যাটাগরি বেছে নাও" data-en="Choose a category">ক্যাটাগরি বেছে নাও</h2></div></div>
+      <div class="tabs" role="tablist" aria-label="Name categories">
+        <button class="tab active" data-category="all" type="button">✦ <span data-bn="সব স্টাইল" data-en="All styles">সব স্টাইল</span></button>
+        <button class="tab" data-category="fancy" type="button">𝓐 <span>Fancy</span></button>
+        <button class="tab" data-category="bold" type="button">𝗔 <span>Bold</span></button>
+        <button class="tab" data-category="tiny" type="button">ᵃ <span data-bn="ছোট অক্ষর" data-en="Tiny">ছোট অক্ষর</span></button>
+        <button class="tab" data-category="love" type="button">♡ <span data-bn="লাভ" data-en="Love">লাভ</span></button>
+        <button class="tab" data-category="gaming" type="button">♛ <span data-bn="গেমিং" data-en="Gaming">গেমিং</span></button>
+      </div>
+      <div class="custom-row">
+        <div class="custom-copy"><b data-bn="নিজের মতো সাজাও" data-en="Customize your name">নিজের মতো সাজাও</b><small data-bn="নামের আগে/পরে সিম্বল যোগ করো" data-en="Add symbols before or after your name">নামের আগে/পরে সিম্বল যোগ করো</small></div>
+        <input id="prefixInput" aria-label="Prefix" maxlength="12" placeholder="♡ ꧁" value="♡ ">
+        <input id="suffixInput" aria-label="Suffix" maxlength="12" placeholder="🦋" value=" 🦋">
+      </div>
+      <div class="results-head"><h2 data-bn="তোমার স্টাইলিশ নামগুলো" data-en="Your stylish names">তোমার স্টাইলিশ নামগুলো</h2><span id="resultCount">12 styles</span></div>
+      <div id="results" class="results" aria-live="polite"></div>
+      <button id="refreshBtn" class="more-btn" type="button">↻ <span data-bn="আবার তৈরি করো" data-en="Regenerate names">আবার তৈরি করো</span></button>
+      <p class="notice" data-bn="নোট: কিছু বিশেষ ফন্ট বা সিম্বল সব অ্যাপ/গেমে সমর্থিত নাও হতে পারে।" data-en="Note: Some special fonts or symbols may not be supported in every app or game.">নোট: কিছু বিশেষ ফন্ট বা সিম্বল সব অ্যাপ/গেমে সমর্থিত নাও হতে পারে।</p>
+    </section>
+
+    <section class="features">
+      <div class="feature"><span>𝓐</span><b data-bn="Fancy Fonts" data-en="Fancy Fonts">Fancy Fonts</b><p data-bn="কার্লি, Bold, ছোট অক্ষরসহ নানা স্টাইল" data-en="Cursive, bold, tiny and more styles">কার্লি, Bold, ছোট অক্ষরসহ নানা স্টাইল</p></div>
+      <div class="feature"><span>♡</span><b data-bn="Couple Names" data-en="Couple Names">Couple Names</b><p data-bn="দুটি নাম মিলিয়ে সুন্দর নাম তৈরি" data-en="Combine two names beautifully">দুটি নাম মিলিয়ে সুন্দর নাম তৈরি</p></div>
+      <div class="feature"><span>♛</span><b data-bn="Gaming Names" data-en="Gaming Names">Gaming Names</b><p data-bn="গেমারদের জন্য সিম্বল ও নামের স্টাইল" data-en="Symbols and styles for gamers">গেমারদের জন্য সিম্বল ও নামের স্টাইল</p></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand">✦ NameStyle Pro</div><p data-bn="ফ্রি ব্যবহার করো • কপি করো • নিজের স্টাইল তৈরি করো" data-en="Free to use • Copy your favorite • Make your own style">ফ্রি ব্যবহার করো • কপি করো • নিজের স্টাইল তৈরি করো</p><small>Made with ✦ for name lovers</small></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite">কপি হয়েছে!</div>
+  <script src="script.js"></script>
+</body>
+</html>
